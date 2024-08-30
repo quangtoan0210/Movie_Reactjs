@@ -5,6 +5,7 @@ import MovieList from "./components/MovieList";
 import { useState } from "react";
 import MovieSearch from "./components/MovieSearch";
 import { MovieProvider } from "./context/MovieDetailContext";
+import Footer from "./components/Footer";
 
 function App() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -76,6 +77,7 @@ function App() {
           {searchData.length > 0 && <MovieSearch data={searchData} />}
         </div>
       </MovieProvider>
+      <Footer/>
     </>
   );
 }
